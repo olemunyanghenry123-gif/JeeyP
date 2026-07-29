@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeeyp Pricing</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeyp Tech | Pricing</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+            --text-white: #ffffff;
+            --text-gray: #b9c6e2;
+            --logo-color: #00e5ff;
+            --card-dark: #111a2e;
+            --card-blue: #1a66ff;
+            --card-blue-border: #3385ff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-white); min-height: 100vh; }
+        .main-header { width: 100%; padding: 40px 8% 20px 8%; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+        .logo { color: var(--logo-color); font-size: 28px; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 600; }
+        .nav-links a.active { color: var(--logo-color); }
+        
+        .page-title { text-align: center; padding: 60px 20px 10px 20px; font-size: 42px; font-weight: 700; }
+        .page-subtitle { text-align: center; color: var(--text-gray); font-size: 16px; margin-bottom: 40px; }
+        
+        .pricing-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px; flex-wrap: wrap; }
+        .pricing-card { flex: 1; min-width: 300px; background-color: var(--card-dark); border-radius: 12px; padding: 40px 30px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        .pricing-card h3 { font-size: 24px; color: var(--logo-color); margin-bottom: 10px; }
+        .price { font-size: 36px; font-weight: 700; margin: 20px 0; color: #ffffff; }
+        .price span { font-size: 16px; font-weight: 400; color: var(--text-gray); }
+        
+        .features-list { list-style: none; margin: 20px 0 40px 0; text-align: left; }
+        .features-list li { margin: 12px 0; font-size: 15px; color: var(--text-gray); display: flex; align-items: center; gap: 10px; }
+        
+        .btn-select { display: block; width: 100%; padding: 14px; background-color: transparent; color: var(--logo-color); border: 2px solid var(--logo-color); border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 15px; }
+        
+        /* Middle Highlighted Card Style */
+        .pricing-card.popular { background-color: var(--card-blue); border: 2px solid var(--card-blue-border); }
+        .pricing-card.popular h3 { color: #ffffff; }
+        .pricing-card.popular .features-list li { color: #e2e8f0; }
+        .pricing-card.popular .btn-select { background-color: #ffffff; color: #000000; border: none; }
+    </style>
 </head>
-
 <body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">JEEYP</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="dashboard">
+    <h1 class="page-title">Transparent Pricing</h1>
+    <p class="page-subtitle">Choose the perfect plan scale built for your digital transformation needs.</p>
 
-<h1>💰 Our Pricing</h1>
+    <section class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+            <div>
+                <h3>Starter</h3>
+                <div class="price">$299<span>/one-time</span></div>
+                <ul class="features-list">
+                    <li>✅ 1 Custom Web Landing Page</li>
+                    <li>✅ Secure Mobile Optimization</li>
+                    <li>✅ Basic Domain Set Up</li>
+                    <li>✅ 1 Month Technical Support</li>
+                </ul>
+            </div>
+            <a href="contact.html" class="btn-select">Select Starter</a>
+        </div>
 
-<div class="dash-cards">
+        <!-- Premium Plan (Highlighted) -->
+        <div class="pricing-card popular">
+            <div>
+                <h3>Professional</h3>
+                <div class="price">$799<span>/one-time</span></div>
+                <ul class="features-list">
+                    <li>✅ Complete Corporate Website</li>
+                    <li>✅ Advanced Custom Web Layouts</li>
+                    <li>✅ E-Commerce API Gateways</li>
+                    <li>✅ 6 Months Core Maintenance</li>
+                </ul>
+            </div>
+            <a href="contact.html" class="btn-select">Select Professional</a>
+        </div>
 
-<div class="card">
-<h3>Starter</h3>
-<h2>UGX 200,000</h2>
-<p>Basic Business Website</p>
-</div>
-
-<div class="card">
-<h3>Professional</h3>
-<h2>UGX 500,000</h2>
-<p>Business Website + Login System</p>
-</div>
-
-<div class="card">
-<h3>Enterprise</h3>
-<h2>Contact Us</h2>
-<p>Custom Software & Mobile Apps</p>
-</div>
-
-</div>
-
-<br>
-
-<a href="contact.html" class="btn">Request a Quote</a>
-
-</div>
-
+        <!-- Enterprise Plan -->
+        <div class="pricing-card">
+            <div>
+                <h3>Enterprise</h3>
+                <div class="price">$1,499<span>/one-time</span></div>
+                <ul class="features-list">
+                    <li>✅ Custom Architecture Systems</li>
+                    <li>✅ Dedicated Security Auditing</li>
+                    <li>✅ Cloud Deployment Frameworks</li>
+                    <li>✅ 1 Year Full Premium SLA Support</li>
+                </ul>
+            </div>
+            <a href="contact.html" class="btn-select">Contact Sales</a>
+        </div>
+    
 </body>
 </html>
