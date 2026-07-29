@@ -1,159 +1,116 @@
-/* Jeeyp Tech Professional Design */
+/* Core Styling & Variables */
+:root {
+    --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+    --text-white: #ffffff;
+    --text-gray: #b9c6e2;
+    --logo-color: #00e5ff;
+    --btn-color: #00e5ff;
+}
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    background: #0b0f19;
-    color: white;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-white);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* Navigation */
-nav {
+/* Navbar Layout */
+.main-header {
+    width: 100%;
+    padding: 30px 8%;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: rgba(0,0,0,0.8);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+/* Logo styling matching the screenshot */
 .logo {
+    color: var(--logo-color);
     font-size: 28px;
-    font-weight: bold;
-    color: #00d4ff;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #00d4ff;
-}
-
-
-/* Hero Section */
-.hero {
-    min-height: 90vh;
+/* Nav links alignment right side */
+.nav-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 10%;
-    background:
-    linear-gradient(135deg,#111827,#020617);
+    list-style: none;
+    gap: 35px;
 }
 
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.hero span {
-    color: #00d4ff;
-}
-
-.hero p {
-    font-size: 20px;
-    color: #cbd5e1;
-    margin-bottom: 30px;
-}
-
-
-.btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: #00d4ff;
-    color: black;
-    border-radius: 30px;
+.nav-links a {
+    color: var(--text-white);
     text-decoration: none;
-    font-weight: bold;
-    transition: .3s;
+    font-size: 16px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
 }
 
-.btn:hover {
-    transform: scale(1.05);
+.nav-links a:hover {
+    opacity: 0.8;
 }
 
-
-/* Cards */
-.services {
-    padding: 70px 8%;
-    text-align:center;
+/* Hero Section Layout Center Realignment */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: calc(100vh - 120px);
 }
 
-.cards {
-    display:flex;
-    gap:25px;
-    justify-content:center;
-    flex-wrap:wrap;
+.hero-content {
+    max-width: 900px;
 }
 
-.card {
-    background:#111827;
-    padding:30px;
-    width:300px;
-    border-radius:20px;
-    border:1px solid #1e293b;
-    transition:.3s;
+/* Big Headline font */
+.hero-content h1 {
+    font-size: 54px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
 }
 
-.card:hover {
-    transform:translateY(-10px);
-    box-shadow:0 0 25px #00d4ff55;
+/* Sub-text block font styling */
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.card h3 {
-    color:#00d4ff;
+/* Precise Rounded Cyan Pill Button Layout */
+.btn-explore {
+    display: inline-block;
+    background-color: var(--btn-color);
+    color: #000000;
+    text-decoration: none;
+    padding: 16px 45px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
-/* Dashboard */
-.dashboard {
-    padding:40px;
-}
-
-.panel {
-    background:#111827;
-    padding:25px;
-    border-radius:15px;
-}
-
-
-/* Footer */
-footer {
-    background:#020617;
-    text-align:center;
-    padding:20px;
-    color:#94a3b8;
-}
-
-
-/* Mobile */
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-}
-
-.hero h1{
-    font-size:35px;
-}
-
-.cards{
-    flex-direction:column;
-    align-items:center;
-}
-
+.btn-explore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.5);
 }
