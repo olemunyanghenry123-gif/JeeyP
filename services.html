@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeeyp Services</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeyp Tech | Services</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+            --text-white: #ffffff;
+            --text-gray: #b9c6e2;
+            --logo-color: #00e5ff;
+            --card-dark: #111a2e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-white); min-height: 100vh; }
+        .main-header { width: 100%; padding: 40px 8% 20px 8%; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+        .logo { color: var(--logo-color); font-size: 28px; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 600; }
+        .nav-links a.active { color: var(--logo-color); }
+        .page-title { text-align: center; padding: 60px 20px 20px 20px; font-size: 42px; font-weight: 700; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .service-card { background-color: var(--card-dark); padding: 40px 30px; border-radius: 12px; text-align: center; }
+        .service-card h3 { font-size: 22px; color: var(--logo-color); margin-bottom: 15px; }
+        .service-card p { color: var(--text-gray); font-size: 15px; line-height: 1.6; }
+    </style>
 </head>
-
 <body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">JEEYP</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="dashboard">
+    <h1 class="page-title">Our Specialized Services</h1>
 
-<h1>🚀 Our Services</h1>
-
-<div class="dash-cards">
-
-<div class="card">
-<h3>🌐 Website Development</h3>
-<p>Professional websites for businesses and organizations.</p>
-</div>
-
-<div class="card">
-<h3>📱 Mobile App Development</h3>
-<p>Android applications with modern designs.</p>
-</div>
-
-<div class="card">
-<h3>💻 Software Development</h3>
-<p>Custom systems for schools, shops and companies.</p>
-</div>
-
-<div class="card">
-<h3>☁️ Cloud Services</h3>
-<p>Secure cloud hosting and deployment.</p>
-</div>
-
-<div class="card">
-<h3>🔒 Cyber Security</h3>
-<p>Protect your business and customer data.</p>
-</div>
-
-<div class="card">
-<h3>🛠 IT Support</h3>
-<p>24/7 technical support for your business.</p>
-</div>
-
-</div>
-
-<br><br>
-
-<a href="index.html" class="btn">⬅ Back Home</a>
-
-</div>
-
+    <section class="services-grid">
+        <div class="service-card">
+            <h3>🌐 Web Development</h3>
+            <p>Creating dynamic, secure, and fast websites tailored specifically to represent and grow your brand online.</p>
+        </div>
+        <div class="service-card">
+            <h3>📱 Software Solutions</h3>
+            <p>Building high-performance desktop and customized mobile applications engineered to handle complex business needs.</p>
+        </div>
+        <div class="service-card">
+            <h3>🔒 Cyber Security</h3>
+            <p>Advanced security architecture deployment, penetration testing, and protection protocols for enterprise assets.</p>
+        </div>
+    
 </body>
 </html>
