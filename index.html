@@ -1,55 +1,257 @@
-<header class="main-header"><!-- Why Choose Section -->
-<div class="why-choose-section">
-    <h2>Why Choose Jeeyp?</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeyp Tech | Innovative Technology Solutions</title>
     
-    <div class="cards-container">
-        <!-- Card 1 -->
-        <div class="card">
-            <h3>⚡ Fast Delivery</h3>
-            <p>We deliver quality projects on time.</p>
-        </div>
+    <!-- Google Fonts link for modern typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <style>
+        /* Core Styling & Variables matching your screenshot */
+        :root {
+            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+            --text-white: #ffffff;
+            --text-gray: #b9c6e2;
+            --logo-color: #00e5ff;
+            --btn-color: #00e5ff;
+            --card-dark: #111a2e;
+            --card-blue: #1a66ff;
+            --card-blue-border: #3385ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-white);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Layout */
+        .main-header {
+            width: 100%;
+            padding: 40px 8% 20px 8%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: var(--logo-color);
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Hero Section Layout */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-content h1 {
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-explore {
+            display: inline-block;
+            background-color: var(--btn-color);
+            color: #000000;
+            text-decoration: none;
+            padding: 16px 45px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+        }
+
+        /* Why Choose Section Layout */
+        .why-choose-section {
+            text-align: center;
+            padding: 60px 8%;
+            width: 100%;
+        }
+
+        .why-choose-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        /* Standard Dark Cards */
+        .card {
+            flex: 1;
+            min-width: 280px;
+            background-color: var(--card-dark);
+            border-radius: 12px;
+            padding: 40px 30px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: var(--logo-color);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-white);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* Specific Highlighted Active Blue Card */
+        .card.active-blue {
+            background-color: var(--card-blue);
+            border: 2px solid var(--card-blue-border);
+        }
+
+        .card.active-blue h3 {
+            color: var(--text-white);
+        }
+
+        /* Bottom Contact Details Section */
+        .contact-footer {
+            text-align: center;
+            padding: 60px 20px 100px 20px;
+            width: 100%;
+        }
+
+        .contact-footer h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .contact-footer p {
+            font-size: 16px;
+            color: var(--text-white);
+            margin: 10px 0;
+        }
         
-        <!-- Card 2 (Active Blue Card) -->
-        <div class="card active-blue">
-            <h3>🛡️ Secure Systems</h3>
-            <p>Your business is protected with modern security.</p>
+        .contact-footer a {
+            color: var(--text-white);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Layer -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">JEEYP</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Hero Banner Section -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Building The Future With Technology</h1>
+            <p>Jeeyp delivers modern websites, software development, cyber security solutions and digital innovation for businesses worldwide.</p>
+            <a href="services.html" class="btn-explore">Explore Services</a>
         </div>
+    </main>
+
+    <!-- Why Choose Section Grid layout -->
+    <section class="why-choose-section">
+        <h2>Why Choose Jeeyp?</h2>
         
-        <!-- Card 3 -->
-        <div class="card">
-            <h3>💡 Creative Ideas</h3>
-            <p>We design beautiful and innovative digital solutions.</p>
+        <div class="cards-container">
+            <!-- Card 1: Fast Delivery -->
+            <div class="card">
+                <h3>⚡ Fast Delivery</h3>
+                <p>We deliver quality projects on time.</p>
+            </div>
+            
+            <!-- Card 2: Secure Systems (Active Highlighted) -->
+            <div class="card active-blue">
+                <h3>🛡️ Secure Systems</h3>
+                <p>Your business is protected with modern security.</p>
+            </div>
+            
+            <!-- Card 3: Creative Ideas -->
+            <div class="card">
+                <h3>💡 Creative Ideas</h3>
+                <p>We design beautiful and innovative digital solutions.</p>
+            </div>
         </div>
-    </div>
-</div>
+    
 
-<!-- Contact Section -->
-<div class="contact-footer">
-    <h2>Contact Jeeyp</h2>
-    <p>📧 Email: info@jeeyp.com</p>
-    <p>📱 WhatsApp: +256 700 000000</p>
-    <p>🌍 Uganda</p>
-</div>
+    <!-- Footer Contact Details block -->
+    <footer class="contact-footer">
+        <h2>Contact Jeeyp</h2>
+        <p>📧 Email: <a href="mailto:info@jeeyp.com">info@jeeyp.com</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me">+256 701 844903</a></p>
+        <p>🌍 Uganda</p>
+    </footer>
 
-    <nav class="navbar">
-        <div class="logo">JEEYP</div>
-        <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-        <link rel="stylesheet" href="style.css">
-
-    </nav>
-</header>
-
-<!-- Main Hero Section -->
-<main class="hero-section">
-    <div class="hero-content">
-        <h1>Building The Future With Technology</h1>
-        <p>Jeeyp delivers modern websites, software development, cyber security solutions and digital innovation for businesses worldwide.</p>
-        <a href="services.html" class="btn-explore">Explore Services</a>
-    </div>
-</main>
+</body>
+</html>
