@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeeyp Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeyp Tech | Portfolio</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+            --text-white: #ffffff;
+            --text-gray: #b9c6e2;
+            --logo-color: #00e5ff;
+            --card-dark: #111a2e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-white); min-height: 100vh; }
+        .main-header { width: 100%; padding: 40px 8% 20px 8%; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+        .logo { color: var(--logo-color); font-size: 28px; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 600; }
+        .nav-links a.active { color: var(--logo-color); }
+        .page-title { text-align: center; padding: 60px 20px 20px 20px; font-size: 42px; font-weight: 700; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .project-card { background-color: var(--card-dark); border-radius: 12px; overflow: hidden; padding: 30px; border: 1px solid rgba(255,255,255,0.05); }
+        .project-tag { color: var(--logo-color); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: inline-block;}
+        .project-card h3 { font-size: 22px; margin-bottom: 15px; }
+        .project-card p { color: var(--text-gray); font-size: 15px; line-height: 1.6; }
+    </style>
 </head>
-
 <body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">JEEYP</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="dashboard">
+    <h1 class="page-title">Our Recent Projects</h1>
 
-<h1>💼 Our Portfolio</h1>
-
-<p>Some of the projects Jeeyp can build.</p>
-
-<div class="dash-cards">
-
-<div class="card">
-<h3>🏫 School Management System</h3>
-<p>Manage students, teachers and results.</p>
-</div>
-
-<div class="card">
-<h3>🛒 Online Shop</h3>
-<p>Modern eCommerce website.</p>
-</div>
-
-<div class="card">
-<h3>🏢 Company Website</h3>
-<p>Professional business websites.</p>
-</div>
-
-<div class="card">
-<h3>📱 Mobile App</h3>
-<p>Android applications for businesses.</p>
-</div>
-
-<div class="card">
-<h3>💳 Payment System</h3>
-<p>Secure online payment integration.</p>
-</div>
-
-<div class="card">
-<h3>☁ Cloud Hosting</h3>
-<p>Reliable cloud deployment and hosting.</p>
-</div>
-
-</div>
-
-<br>
-
-<a href="index.html" class="btn">⬅ Back Home</a>
-
-</div>
-
+    <section class="portfolio-grid">
+        <div class="project-card">
+            <span class="project-tag">E-Commerce</span>
+            <h3>Global Pay Integration</h3>
+            <p>Successfully engineered and built a secure custom payment getaway pipeline linking mobile wallets to global virtual processing networks.</p>
+        </div>
+        <div class="project-card">
+            <span class="project-tag">Cyber Security</span>
+            <h3>Enterprise Vault Shield</h3>
+            <p>Conducted penetration structural testing and developed network firewalls protecting database platforms for financial operations.</p>
+        </div>
+        <div class="project-card">
+            <span class="project-tag">Cloud Infrastructure</span>
+            <h3>Vercel Engine Pro</h3>
+            <p>Designed zero-downtime deployment automation scripts serving lightweight corporate platforms worldwide with high performance optimization.</p>
+        </div>
+    
 </body>
 </html>
