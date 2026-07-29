@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Jeeyp</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeyp Tech | Contact</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+            --text-white: #ffffff;
+            --text-gray: #b9c6e2;
+            --logo-color: #00e5ff;
+            --card-dark: #111a2e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-white); min-height: 100vh; }
+        .main-header { width: 100%; padding: 40px 8% 20px 8%; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+        .logo { color: var(--logo-color); font-size: 28px; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 600; }
+        .nav-links a.active { color: var(--logo-color); }
+        .contact-container { max-width: 600px; margin: 60px auto; padding: 40px; background-color: var(--card-dark); border-radius: 12px; text-align: center; }
+        .contact-container h1 { font-size: 32px; margin-bottom: 30px; }
+        .contact-method { margin: 25px 0; font-size: 18px; }
+        .contact-method a { color: var(--logo-color); text-decoration: none; font-weight: 600; }
+    </style>
 </head>
-
 <body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">JEEYP</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="dashboard">
-
-<h1>📞 Contact Jeeyp</h1>
-
-<p>We'd love to hear from you.</p>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<input type="text" placeholder="Subject" required>
-
-<textarea placeholder="Write your message..." rows="6" required></textarea>
-
-<button class="btn" type="submit">
-Send Message
-</button>
-
-</form>
-
-<br>
-
-<h3>📧 Email</h3>
-<p>info@jeeyp.com</p>
-
-<h3>📱 Phone</h3>
-<p>+256 700 000000</p>
-
-<h3>📍 Location</h3>
-<p>Kampala, Uganda</p>
-
-<br>
-
-<a href="index.html" class="btn">⬅ Back Home</a>
-
-</div>
-
+    <div class="contact-container">
+        <h1>Get In Touch</h1>
+        <p style="color: var(--text-gray); margin-bottom: 20px;">Reach out directly to start your digital innovation journey with us.</p>
+        
+        <div class="contact-method">
+            <p>📧 Email Us:</p>
+            <a href="mailto:info@jeeyp.com">info@jeeyp.com</a>
+        </div>
+        
+        <div class="contact-method">
+            <p>📱 WhatsApp Chat:</p>
+            <a href="https://wa.me" target="_blank">+256 700 000000</a>
+        </div>
+        
+        <div class="contact-method" style="margin-top: 30px;">
+            <p>🌍 Operational Hub:</p>
+            <span style="font-weight: 600;">Uganda</span>
+        </div>
+    </div>
 </body>
 </html>
