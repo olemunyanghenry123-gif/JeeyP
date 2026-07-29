@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeeyp Login</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeyp Tech | Login</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
+            --text-white: #ffffff;
+            --logo-color: #00e5ff;
+            --card-dark: #111a2e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-white); min-height: 100vh; }
+        .main-header { width: 100%; padding: 40px 8% 20px 8%; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+        .logo { color: var(--logo-color); font-size: 28px; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 600; }
+        .nav-links a.active { color: var(--logo-color); }
+        .login-box { max-width: 450px; margin: 80px auto; padding: 40px; background-color: var(--card-dark); border-radius: 12px; }
+        .login-box h2 { text-align: center; margin-bottom: 30px; font-size: 28px; }
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; margin-bottom: 8px; font-size: 14px; color: #b9c6e2; }
+        .input-group input { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background-color: #0d1627; color: white; font-family: 'Poppins', sans-serif; }
+        .btn-login { width: 100%; padding: 14px; background-color: var(--logo-color); color: black; border: none; border-radius: 6px; font-weight: 700; font-size: 16px; cursor: pointer; margin-top: 10px; }
+    </style>
 </head>
-
 <body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">JEEYP</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="login-box">
-
-<h1>Welcome Back</h1>
-
-<p>Login to your Jeeyp account</p>
-
-<form action="dashboard.html">
-
-<input type="email" placeholder="Email Address" required>
-
-<input type="password" placeholder="Password" required>
-
-<button type="submit" class="btn">
-Login
-</button>
-
-<p>
-Don't have an account?
-<a href="register.html">Register</a>
-</p>
-
-</>
-
-</div>
-
+    <div class="login-box">
+        <h2>Client Portal Login</h2>
+        <form onsubmit="event.preventDefault(); alert('Login portal system integration active!');">
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn-login">Access Portal</button>
+        </form>
+    </div>
 </body>
 </html>
