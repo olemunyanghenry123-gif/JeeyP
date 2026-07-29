@@ -1,116 +1,159 @@
-/* Modern Tech Theme Variables */
-:root {
-    --bg-dark: #0a0f1d;
-    --text-light: #ffffff;
-    --primary-glow: #0072ff;
-    --secondary-glow: #00dfa2;
-    --nav-bg: rgba(10, 15, 29, 0.75);
+/* Jeeyp Tech Professional Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    background: var(--bg-dark);
-    color: var(--text-light);
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
+    background: #0b0f19;
+    color: white;
+    line-height: 1.6;
 }
 
-/* Glassmorphism Header Layer */
-.main-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    z-index: 1000;
-}
-
-.navbar {
+/* Navigation */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 20px 8%;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* Glowing Tech Logo */
 .logo {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-.logo span {
-    color: var(--secondary-glow);
-    text-shadow: 0 0 10px rgba(0, 223, 162, 0.5);
+    font-size: 28px;
+    font-weight: bold;
+    color: #00d4ff;
 }
 
-/* Hover Interactive Nav Links */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: #a0aec0;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--text-light);
-}
-
-/* Animated underline effect */
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: var(--primary-glow);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* Futuristic Glowing Button */
-.btn-glow {
-    background: linear-gradient(135deg, var(--primary-glow), #00c6ff);
+nav a {
     color: white;
-    padding: 10px 24px;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 10%;
+    background:
+    linear-gradient(135deg,#111827,#020617);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #00d4ff;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #00d4ff;
+    color: black;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: bold;
+    transition: .3s;
 }
 
-.btn-glow:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+.btn:hover {
+    transform: scale(1.05);
 }
 
-/* Mobile responsive menu hamburger */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
+
+/* Cards */
+.services {
+    padding: 70px 8%;
+    text-align:center;
 }
-.menu-toggle .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: white;
-    transition: all 0.3s ease-in-out;
+
+.cards {
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card {
+    background:#111827;
+    padding:30px;
+    width:300px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+    transition:.3s;
+}
+
+.card:hover {
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00d4ff55;
+}
+
+.card h3 {
+    color:#00d4ff;
+}
+
+
+/* Dashboard */
+.dashboard {
+    padding:40px;
+}
+
+.panel {
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+}
+
+
+/* Footer */
+footer {
+    background:#020617;
+    text-align:center;
+    padding:20px;
+    color:#94a3b8;
+}
+
+
+/* Mobile */
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
 }
