@@ -67,7 +67,7 @@ ul{
     position:fixed;
 
     top:0;
-
+    left:0;
     width:100%;
 
     z-index:999;
@@ -172,7 +172,7 @@ ul{
 
     align-items:center;
 
-    padding:150px 8% 80px;
+    padding:180px 8% 100px;
 
 }
 
@@ -192,11 +192,11 @@ ul{
 
 .hero-left h1{
 
-    font-size:60px;
+    font-size:64px;
 
     line-height:1.2;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 }
 
