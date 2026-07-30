@@ -14,14 +14,14 @@
 
 :root{
 
-    --primary:#00d4ff;
-    --secondary:#0077ff;
+    --primary:#3B82F6;
+    --secondary:#8B5CF6;
     --dark:#07142b;
     --dark2:#0d1d3d;
-    --card:#132340;
+    --card:#111827;
     --white:#ffffff;
     --text:#d7e5ff;
-    --gray:#9db4d8;
+    --gray:#94A3B8;
     --shadow:0 15px 40px rgba(0,0,0,.35);
 
 }
@@ -30,7 +30,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:linear-gradient(180deg,#081120,#102b63,#081120);
+    background:linear-gradient(135deg,#050816,#0F172A,#1E293B);
 
     color:var(--white);
 
@@ -226,7 +226,7 @@ ul{
 
 }
 
-.btn-primary{
+background:linear-gradient(90deg,#3B82F6,#8B5CF6);
 
     background:var(--primary);
 
@@ -337,7 +337,7 @@ ul{
 
 .service-card{
 
-    background:var(--card);
+    background:linear-gradient(145deg,#111827,#1E293B);
 
     padding:40px;
 
