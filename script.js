@@ -105,3 +105,46 @@ if (footer) {
         `© ${new Date().getFullYear()} Jeeyp Tech. All Rights Reserved.`;
 
 }
+/* Portfolio Filter */
+
+const filterButtons = document.querySelectorAll(".portfolio-filter button");
+const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.textContent.toLowerCase();
+
+        portfolioCards.forEach(card => {
+
+            const category = card.dataset.category;
+
+            if (filter === "all") {
+
+                card.style.display = "block";
+
+            } else if (
+                (filter === "websites" && category === "website") ||
+                (filter === "mobile apps" && category === "app") ||
+                (filter === "cybersecurity" && category === "cyber") ||
+                (filter === "cloud" && category === "cloud") ||
+                (filter === "software" && category === "software")
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
