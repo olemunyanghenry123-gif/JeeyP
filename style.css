@@ -1,116 +1,312 @@
-/* Core Styling & Variables */
-:root {
-    --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
-    --text-white: #ffffff;
-    --text-gray: #b9c6e2;
-    --logo-color: #00e5ff;
-    --btn-color: #00e5ff;
+/* ===========================
+   JEEYP TECH
+   STYLE.CSS (PART 1)
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg-gradient);
-    color: var(--text-white);
-    min-height: 100vh;
-    overflow-x: hidden;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#081120;
+    color:#ffffff;
+    line-height:1.6;
 }
 
-/* Navbar Layout */
-.main-header {
-    width: 100%;
-    padding: 30px 8%;
+/*================ NAVBAR ================*/
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(10,20,40,.65);
+
+    z-index:999;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+.logo{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
 }
 
-/* Logo styling matching the screenshot */
-.logo {
-    color: var(--logo-color);
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.logo span{
+
+    color:#4fa3ff;
+
 }
 
-/* Nav links alignment right side */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 35px;
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
 }
 
-.nav-links a {
-    color: var(--text-white);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    transition: opacity 0.2s ease;
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.35s;
+
 }
 
-.nav-links a:hover {
-    opacity: 0.8;
+.nav-links a:hover{
+
+    color:#4fa3ff;
+
 }
 
-/* Hero Section Layout Center Realignment */
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 100px 20px;
-    min-height: calc(100vh - 120px);
+.login-btn{
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:#4fa3ff;
+
+    color:#fff !important;
+
 }
 
-.hero-content {
-    max-width: 900px;
+/*================ HERO ================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:140px 8% 80px;
+
+    background:
+    linear-gradient(135deg,#091225,#101f44,#122d6b);
+
 }
 
-/* Big Headline font */
-.hero-content h1 {
-    font-size: 54px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
 }
 
-/* Sub-text block font styling */
-.hero-content p {
-    font-size: 18px;
-    color: var(--text-gray);
-    line-height: 1.6;
-    margin-bottom: 40px;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+.hero-left h1{
+
+    font-size:62px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
 }
 
-/* Precise Rounded Cyan Pill Button Layout */
-.btn-explore {
-    display: inline-block;
-    background-color: var(--btn-color);
-    color: #000000;
-    text-decoration: none;
-    padding: 16px 45px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.hero-left h1 span{
+
+    color:#55aaff;
+
 }
 
-.btn-explore:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.5);
+.hero-left p{
+
+    font-size:19px;
+
+    color:#c8d6f1;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+    background:#4fa3ff;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 35px rgba(79,163,255,.4);
+
+}
+
+.btn-secondary{
+
+    border:2px solid #4fa3ff;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    transition:.4s;
+
+}
+
+.btn-secondary:hover{
+
+    background:#4fa3ff;
+
+}
+
+.glass-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.glass-card h2{
+
+    margin-bottom:25px;
+
+    color:#4fa3ff;
+
+}
+
+.glass-card ul{
+
+    list-style:none;
+
+}
+
+.glass-card li{
+
+    margin:18px 0;
+
+    font-size:18px;
+
+}
+
+/*================ STATS ================*/
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    padding:80px 8%;
+
+    background:#0c172b;
+
+}
+
+.stat{
+
+    background:#132340;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:35px;
+
+    transition:.4s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat h2{
+
+    font-size:46px;
+
+    color:#4fa3ff;
+
+}
+
+.stat p{
+
+    margin-top:12px;
+
+    color:#c8d6f1;
+
 }
