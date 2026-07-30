@@ -91,7 +91,485 @@ body{
     color:#4fa3ff;
 
 }
+/*================ SERVICES ================*/
 
+.services{
+
+    padding:100px 8%;
+
+    background:#081120;
+
+}
+
+.services h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#132340;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+    border-color:#4fa3ff;
+
+}
+
+.card h3{
+
+    color:#4fa3ff;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    color:#cbd7ef;
+
+    line-height:1.8;
+
+}
+
+/*================ ABOUT ================*/
+
+.about{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+    background:#0d1930;
+
+}
+
+.about h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#cbd7ef;
+
+    line-height:2;
+
+}
+
+/*================ CTA ================*/
+
+.cta{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#14305f,#234f9b);
+
+}
+
+.cta h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    font-size:19px;
+
+    margin-bottom:35px;
+
+    color:#eef5ff;
+
+}
+
+.cta .btn-primary{
+
+    display:inline-block;
+
+}
+
+/*================ FOOTER ================*/
+
+footer{
+
+    background:#050b18;
+
+    padding:60px 8%;
+
+    text-align:center;
+
+}
+
+footer h2{
+
+    color:#4fa3ff;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#9fb2d4;
+
+    margin:10px 0;
+
+}
+
+/*================ ANIMATIONS ================*/
+
+.hero-left{
+
+    animation:slideLeft 1s ease;
+
+}
+
+.hero-right{
+
+    animation:slideRight 1s ease;
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}/*==============================
+   RESPONSIVE DESIGN
+==============================*/
+
+@media (max-width:1100px){
+
+.hero-content{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-left{
+
+order:2;
+
+}
+
+.hero-right{
+
+order:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+.nav-links{
+
+flex-direction:column;
+
+align-items:center;
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.hero{
+
+padding-top:180px;
+
+}
+
+.hero-left h1{
+
+font-size:42px;
+
+}
+
+.hero-left p{
+
+font-size:17px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.about h2,
+.services h2,
+.cta h2{
+
+font-size:34px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.logo{
+
+font-size:26px;
+
+}
+
+.hero-left h1{
+
+font-size:34px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+margin-bottom:15px;
+
+}
+
+.hero-buttons{
+
+display:block;
+
+}
+
+.glass-card{
+
+padding:25px;
+
+}
+
+}
+
+/*==============================
+   SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#081120;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#4fa3ff;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#2f8fff;
+
+}
+
+/*==============================
+   SELECTION
+==============================*/
+
+::selection{
+
+background:#4fa3ff;
+
+color:white;
+
+}
+
+/*==============================
+   GLOBAL TRANSITIONS
+==============================*/
+
+a,
+button,
+.card,
+.stat,
+.btn-primary,
+.btn-secondary{
+
+transition:all .35s ease;
+
+}
+
+/*==============================
+   HOVER EFFECTS
+==============================*/
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+}
+
+.stat:hover{
+
+background:#18335c;
+
+}
+
+footer h2{
+
+letter-spacing:2px;
+
+font-weight:700;
+
+}
+
+footer p{
+
+font-size:15px;
+
+}
+
+/*==============================
+   END OF STYLE.CSS
+==============================*/
 .login-btn{
 
     padding:10px 20px;
