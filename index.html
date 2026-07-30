@@ -3,92 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeeyp Tech | Home</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <style>
-        :root {
-            --bg-gradient: linear-gradient(180deg, #102e6c 0%, #0d204d 40%, #07112a 100%);
-            --text-white: #ffffff;
-            --text-gray: #b9c6e2;
-            --logo-color: #00e5ff;
-            --btn-color: #00e5ff;
-            --card-dark: #111a2e;
-            --card-blue: #1a66ff;
-            --card-blue-border: #3385ff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-white); min-height: 100vh; }
-        .main-header { width: 100%; padding: 40px 8% 20px 8%; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
-        .logo { color: var(--logo-color); font-size: 28px; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
-        .nav-links { display: flex; list-style: none; gap: 35px; }
-        .nav-links a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 600; }
-        .nav-links a.active { color: var(--logo-color); }
-        .hero-section { display: flex; justify-content: center; align-items: center; text-align: center; padding: 100px 20px 60px 20px; }
-        .hero-content { max-width: 900px; }
-        .hero-content h1 { font-size: 54px; font-weight: 700; margin-bottom: 25px; line-height: 1.2; }
-        .hero-content p { font-size: 18px; color: var(--text-gray); line-height: 1.6; margin-bottom: 40px; max-width: 750px; margin-left: auto; margin-right: auto; }
-        .btn-explore { display: inline-block; background-color: var(--btn-color); color: #000000; text-decoration: none; padding: 16px 45px; font-size: 16px; font-weight: 700; border-radius: 50px; }
-        .why-choose-section { text-align: center; padding: 60px 8%; width: 100%; }
-        .why-choose-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 40px; }
-        .cards-container { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
-        .card { flex: 1; min-width: 280px; background-color: var(--card-dark); border-radius: 12px; padding: 40px 30px; min-height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .card h3 { font-size: 20px; color: var(--logo-color); margin-bottom: 15px; }
-        .card p { color: var(--text-white); font-size: 15px; line-height: 1.5; }
-        .card.active-blue { background-color: var(--card-blue); border: 2px solid var(--card-blue-border); }
-        .card.active-blue h3 { color: var(--text-white); }
-        .contact-footer { text-align: center; padding: 60px 20px 100px 20px; width: 100%; }
-        .contact-footer h2 { font-size: 28px; margin-bottom: 25px; font-weight: 700; }
-        .contact-footer p { font-size: 16px; color: var(--text-white); margin: 10px 0; }
-        .contact-footer a { color: var(--text-white); text-decoration: none; }
-    </style>
+    <title>Jeeyp Tech | Innovative Technology Solutions</title>
+
+    <meta name="description" content="Jeeyp Tech provides professional websites, software development, cybersecurity, cloud solutions and IT consulting.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">JEEYP</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1>Building The Future With Technology</h1>
-            <p>Jeeyp delivers modern websites, software development, cyber security solutions and digital innovation for businesses worldwide.</p>
-            <a href="services.html" class="btn-explore">Explore Services</a>
+<header class="hero">
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Jeeyp<span>Tech</span>
         </div>
-    </main>
 
-    <section class="why-choose-section">
-        <h2>Why Choose Jeeyp?</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3>⚡ Fast Delivery</h3>
-                <p>We deliver quality projects on time.</p>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="hero-content">
+
+        <div class="hero-left">
+
+            <h1>
+                Empowering Businesses Through
+                <span>Innovative Technology</span>
+            </h1>
+
+            <p>
+
+                We design beautiful websites,
+                build powerful business software,
+                create secure cloud solutions,
+                and help businesses grow through modern technology.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="services.html" class="btn-primary">
+                    Explore Services
+                </a>
+
+                <a href="contact.html" class="btn-secondary">
+                    Contact Us
+                </a>
+
             </div>
-            <div class="card active-blue">
-                <h3>🛡️ Secure Systems</h3>
-                <p>Your business is protected with modern security.</p>
-            </div>
-            <div class="card">
-                <h3>💡 Creative Ideas</h3>
-                <p>We design beautiful and innovative digital solutions.</p>
-            </div>
+
         </div>
-    
 
-    <footer class="contact-footer">
-        <h2>Contact Jeeyp</h2>
-        <p>📧 Email: <a href="mailto:info@jeeyp.com">info@jeeyp.com</a></p>
-        <p>📱 WhatsApp: <a href="https://wa.me">+256 700 000000</a></p>
-        <p>🌍 Uganda</p>
-    </footer>
+        <div class="hero-right">
+
+            <div class="glass-card">
+
+                <h2>Why Jeeyp Tech?</h2>
+
+                <ul>
+
+                    <li>✔ Professional Websites</li>
+
+                    <li>✔ Custom Software</li>
+
+                    <li>✔ Cybersecurity</li>
+
+                    <li>✔ Cloud Solutions</li>
+
+                    <li>✔ 24/7 Technical Support</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>150+</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat">
+        <h2>80+</h2>
+        <p>Happy Clients</p>
+    </div>
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Support</p>
+    </div>
+
+    <div class="stat">
+        <h2>99%</h2>
+        <p>Satisfaction</p>
+    </div>
+
+</section>
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Website Development</h3>
+<p>Modern responsive websites for businesses.</p>
+</div>
+
+<div class="card">
+<h3>Software Development</h3>
+<p>Custom systems built for efficiency.</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity</h3>
+<p>Protect your business and customer data.</p>
+</div>
+
+<div class="card">
+<h3>Cloud Solutions</h3>
+<p>Reliable hosting and cloud infrastructure.</p>
+</div>
+
+<div class="card">
+<h3>IT Consulting</h3>
+<p>Technology advice to grow your business.</p>
+</div>
+
+<div class="card">
+<h3>Mobile Apps</h3>
+<p>Android and iOS applications.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>Why Choose Jeeyp Tech?</h2>
+
+<p>
+
+We combine innovation, creativity and reliability to
+deliver world-class digital solutions that help businesses
+succeed in today's competitive world.
+
+</p>
+
+</section>
+
+<section class="cta">
+
+<h2>Let's Build Your Next Project</h2>
+
+<p>
+
+Need a website, software, mobile app or IT solution?
+
+</p>
+
+<a href="contact.html" class="btn-primary">
+
+Get Started
+
+</a>
+
+</section>
+
+<footer>
+
+<h2>Jeeyp Tech</h2>
+
+<p>
+
+Innovation • Software • Websites • Cloud • Security
+
+</p>
+
+<p>
+
+© 2026 Jeeyp Tech. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
